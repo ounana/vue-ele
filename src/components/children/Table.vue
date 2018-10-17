@@ -1,0 +1,49 @@
+<template>
+	<el-row>
+		<el-table
+      :data="tableData"
+      highlight-current-row>
+      <el-table-column
+        type="index">
+      </el-table-column>
+      <el-table-column
+        prop="date"
+        label="日期"
+        width="180">
+      </el-table-column>
+      <el-table-column
+        prop="name"
+        label="姓名"
+        width="180">
+      </el-table-column>
+      <el-table-column
+        prop="address"
+        label="地址">
+      </el-table-column>
+    </el-table>
+    <el-pagination
+		  background
+		  :total="100">
+		</el-pagination>
+	</el-row>
+</template>
+<script>
+	export default{
+		data(){
+			return{
+				tableData:[
+					{name:'bill',date:25,address:'成都'},
+					{name:'kemi',date:24,address:'成都'},
+					{name:'tom',date:22,address:'成都'},
+					{name:'grule',date:19,address:'成都'},
+					{name:'belbo',date:16,address:'成都'},
+				]
+			}
+		},
+	}
+</script>
+<style scoped>
+	table tr td{
+		border: 1px solid #ccc;
+	}
+</style>
