@@ -15,8 +15,7 @@
 ## configure
 
 ### Prefetch
-rel="prefetch"属性，浏览器会利用空闲时间提前获取内容。  
-默认情况下，自动生成 prefetch 标签。
+rel="prefetch"属性，浏览器会利用空闲时间提前获取内容，默认情况下，自动生成 prefetch 标签。
 
 ### 模式
 开发 development 模式用于 vue-cli-service serve  
