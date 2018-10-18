@@ -6,6 +6,7 @@ module.exports={
   // outputDir:'dist',
   // assetsDir:'assets',//静态资源目录，相对outputDir
   //多页打包
+  
   pages:{
   	index:{
   		entry: 'src/main.js',
