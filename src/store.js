@@ -5,10 +5,23 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state:{
-    count: 0
+    count: 0,
+    todos:[{
+      id:1,text:'...',done:true
+    },{
+      id:2,text:'...',done:false
+    },{
+      id:3,text:'...',done:true
+    }]
+  },
+  getters:{
+    //用来过滤数据，做数据提前操作
+    doneTodos:state=>{
+      return state.todos.filter(todo => todo.done)
+    }
   },
   mutations:{
-    //同步提交数据
+    //同步提交数据，使用commit提交
     increment(state,payload){
       state.count+=payload.amount
     },
@@ -17,19 +30,14 @@ export default new Vuex.Store({
     },
   },
   actions:{
-    //异步提交数据
+    //异步提交数据，使用dispatch分发
     increment(context){
       context.commit({type:'increment',amount:10})
     },
-    incrementAsync({commit}){
+    incrementAsync(context){
       setTimeout(()=>{
-        commit({type:'increment',amount:10})
+        context.commit({type:'increment',amount:10})
       },1000)
-    }
-  },
-  getters:{
-    doneTodos:state=>{
-      return state.todos.filter(todo=>todo.done)
     }
   }
 })

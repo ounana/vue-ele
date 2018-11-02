@@ -13,6 +13,9 @@ export default{
 	computed:{
 		count(){
 			return this.$store.state.count
+		},
+		doneTodos(){
+			return this.$store.getters.doneTodos
 		}
 	}
 }
