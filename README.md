@@ -1,4 +1,4 @@
-# vue-ele
+# vue-app
 
 ## Project setup
 >npm install
