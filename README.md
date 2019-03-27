@@ -1,7 +1,5 @@
-# vue-example
-
 ## NPM Scripts
-npm install
-npm run serve
-npm run build
-npm run lint
+npm install  
+npm run serve  
+npm run build  
+npm run lint  
