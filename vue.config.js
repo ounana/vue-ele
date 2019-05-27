@@ -1,6 +1,6 @@
 module.exports={
 	//公共路径
-	baseUrl: process.env.NODE_ENV === 'production' ? '' : '/',
+	publicPath: process.env.NODE_ENV === 'production' ? '' : '/',
   //隐藏代码规范警告
   lintOnSave: false,
   // outputDir:'dist',
